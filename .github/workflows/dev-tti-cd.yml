@@ -149,7 +149,7 @@ jobs:
     needs: [app-env-app, app-env-frontend]
 
     # dda:release-gate
-    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
+    if: ${{ github.event_name == 'workflow_dispatch' }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
